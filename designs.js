@@ -19,14 +19,14 @@ form.addEventListener("submit", (event) => {
 function makeGrid(x,y) {
   document.querySelector('#pixelCanvas').innerHTML = '';
  // Your code goes here!
+ //to create the table rows and table cells
    for(var i = 1; i<=x; i++){
        document.querySelector('#pixelCanvas').innerHTML += `<tr id='table-${i}'></tr>`
        for(var j = 1; j<=y; j++)
        document.querySelector(`#table-${i}`).innerHTML += `<td class='cell'></td>`
    }
    
-   
-
+   // to add colors to the cells created
     const cells = document.getElementsByClassName('cell');
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("click", function (event) {
